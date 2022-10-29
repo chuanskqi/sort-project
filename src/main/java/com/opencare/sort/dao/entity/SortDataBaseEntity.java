@@ -12,8 +12,11 @@ import lombok.Data;
 public class SortDataBaseEntity<T extends Comparable> implements Comparable<SortDataBaseEntity> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    // 标识唯一请求号 TODO
+    // private long requestId;
 
     /**
      * 排序数据

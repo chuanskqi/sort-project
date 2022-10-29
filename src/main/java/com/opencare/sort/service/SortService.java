@@ -15,6 +15,8 @@ public class SortService {
 
     final SortDataDaoDelegate dataDelegateDaoService;
 
+    // 从1开始排序
+    static final long START_ORDER_ID = 1;
     /**
      * 排序并保存数据
      * @param datas 待排序数据集合
@@ -53,7 +55,7 @@ public class SortService {
      * 使用模板模式复用代码 设置对象排序编号
      */
     private void setOrderId(List<SortDataBaseEntity> entities, BiConsumer<SortDataBaseEntity, Long> consumer) {
-        long orderId = 0;
+        long orderId = START_ORDER_ID;
         for (SortDataBaseEntity entity : entities) {
             consumer.accept(entity, orderId);
             orderId ++;
