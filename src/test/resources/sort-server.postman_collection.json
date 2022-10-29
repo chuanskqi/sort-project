@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "1334cfe0-edc2-41ed-af1e-25f57b94840d",
+		"name": "sort-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "排序对象-string",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [\"1\",\"2\",\"3\",\"4\",\"11\",\"22\",\"33\",\"44\",\"a\",\"b\",\"5\",\"8\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sort/data/sort",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sort",
+						"data",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "排序对象-long",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [4,5,6,1,2,3,7,8,9]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sort/data/sort",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sort",
+						"data",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "排序对象-bigdecimal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [100.1,10.1,5.1,6.1,2.1,3.1],\r\n    \"order\": \"asc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sort/data/sort",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sort",
+						"data",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询所有string记录",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sort/data/view/string",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sort",
+						"data",
+						"view",
+						"string"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询所有long记录",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sort/data/view/long",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sort",
+						"data",
+						"view",
+						"long"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询所有decimal记录",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sort/data/view/bigdecimal",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sort",
+						"data",
+						"view",
+						"bigdecimal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

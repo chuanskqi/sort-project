@@ -1,4 +1,4 @@
-package com.opencare.sort.dto;
+package com.opencare.sort.controller.dto;
 
 import java.io.Serializable;
 import lombok.Data;
@@ -48,14 +48,6 @@ public class BaseResponse<T> implements Serializable {
 
     public static <T> BaseResponse<T> fail(int errorCode, String msg) {
         return new BaseResponse<T>(errorCode, msg, null);
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
     }
 
     public boolean success() {
