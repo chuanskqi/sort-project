@@ -17,7 +17,7 @@ import org.springframework.util.CollectionUtils;
  */
 @Service
 @AllArgsConstructor
-public class SortDataDaoDelegateService implements InitializingBean {
+public class SortDataDaoDelegate implements InitializingBean {
 
     // 发现全部Dao实现
     final List<SortDataBaseDao> sortDataBaseDaos;
@@ -41,7 +41,11 @@ public class SortDataDaoDelegateService implements InitializingBean {
             sortDataBaseDao -> sortDataBaseDao.getSortDataMapper().getEntityClazz()));
     }
 
-    public <T> SortDataBaseEntity newEntity(Class<T> dataType) {
+    /**
+     * 实例化对象
+     * @param dataType
+     */
+    public SortDataBaseEntity newEntity(Class<?> dataType) {
         Class<? extends SortDataBaseEntity> clazz = clazz2EntityMap.get(dataType);
         if (clazz == null) {
             throw new UnsupportedOperationException("not exist dataType:" + dataType.getName());

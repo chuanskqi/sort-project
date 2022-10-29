@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class SortService {
 
-    final SortDataDaoDelegateService dataDelegateDaoService;
+    final SortDataDaoDelegate dataDelegateDaoService;
 
     /**
      * 排序并保存数据
