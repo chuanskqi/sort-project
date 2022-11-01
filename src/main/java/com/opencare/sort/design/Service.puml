@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+Object[] elementData
+size()
+}
+
+
+enum 服务类型 {
+    看耳朵
+    看鼻子
+}
+
+class 服务定义 {
+    服务编号
+    服务类型
+    List<服务需求>
+}
+
+class 服务需求 {
+    服务编号
+    服务类型
+    资源个数
+}
+
+
+
+enum 资源类型 {
+    医生
+    护士
+    房间
+    设备
+}
+
+enum 资源实体 {
+    资源编号
+    资源类型
+    资源名称
+
+}
+
+
+@enduml
